@@ -119,8 +119,14 @@ class RRTGraph:
         y = int(random.uniform(0, self.maph))
         return x, y
 
-    def nearest(self):
-        pass
+    def nearest(self, n):
+        dmin = self.distance(0, n)
+        nnear = 0
+        for i in range(0, n):
+            if self.distance(i, n) < dmin:
+                dmin = self.distance(i, n)
+                nnear = i
+        return nnear
 
     def isFree(self):
         n = self.number_of_nodes()-1
