@@ -178,7 +178,7 @@ class RRTGraph:
                 self.goalFlag = True
             else:
                 self.add_node(nrand, x, y)
-
+#test
     def path_to_goal(self):
         if self.goalFlag:
             self.path = []
